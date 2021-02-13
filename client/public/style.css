@@ -2,3 +2,37 @@ body {
   background-color: black;
   color: white;
 }
+
+.colorbar-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+
+.colorbar-container.selected {
+  border: 1px solid white;
+}
+
+.colorbutton {
+  width: 100px;
+  height: 100px;
+}
+
+.colorbar {
+  margin-left: 10px;
+  height: 100px;
+  width: 800px;
+}
+
+.titlebar {
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.titlebar .header {
+  display: block;
+  color: black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0;
+}
