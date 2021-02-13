@@ -1,11 +1,6 @@
 const path = require('path');
-const { DefinePlugin } = require('webpack');
 
-const dotenv = require('dotenv').config({
-  path: path.join(__dirname, '.env')
-}).parsed;
-
-module.exports = (env) => {
+module.exports = () => {
   return {
     entry: path.resolve(__dirname, './client/src'),
     module: {
@@ -24,10 +19,5 @@ module.exports = (env) => {
       path: path.resolve(__dirname, './client/public'),
       filename: 'bundle.js',
     },
-    plugins: [
-      new DefinePlugin({
-        'env.PORT': dotenv.PORT,
-      })
-    ],
   };
 };
